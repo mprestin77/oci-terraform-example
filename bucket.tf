@@ -17,8 +17,8 @@ resource "oci_objectstorage_bucket" "os_buckets" {
   access_type    = "NoPublicAccess"
   auto_tiering = "Disabled"
   defined_tags = {
-    "Application.name" = var.os_buckets[count.index].tags[0]
-    "Application.environment" = var.os_buckets[count.index].tags[1]
+    "${oci_identity_tag_namespace.tag-namespace1.name}.${oci_identity_tag.tag1.name}" = var.servers[count.index].tags[0]
+    "${oci_identity_tag_namespace.tag-namespace1.name}.${oci_identity_tag.tag2.name}" = var.servers[count.index].tags[1]
   }
 }
 

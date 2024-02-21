@@ -11,13 +11,13 @@ resource "oci_identity_tag_namespace" "tag-namespace1" {
 resource "oci_identity_tag" "tag1" {
   #Required
   description      = "Application name"
-  name             = "name"
+  name             = "AppName"
   tag_namespace_id = oci_identity_tag_namespace.tag-namespace1.id
 }
 
 resource "oci_identity_tag" "tag2" {
   #Required
   description      = "Environment Dev|QA|Stage|Prod"
-  name             = "environment"
+  name             = "AppEnv"
   tag_namespace_id = oci_identity_tag_namespace.tag-namespace1.id
 }
