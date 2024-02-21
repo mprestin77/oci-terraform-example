@@ -8,7 +8,7 @@ This example shows how to use Terraform to provision the following resources:
 
 - It creates 2 Object Storage buckets
 
-Once VMs are provisioned you can SSH to the bastion VM and from their ssh to application VMs 
+After VMs are provisioned you can SSH to the bastion VM and from their ssh to application VMs.  SSH private key is stored in the key.pem file. 
 
 ## Prerequisites
 
